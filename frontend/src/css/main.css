@@ -1,0 +1,21 @@
+.outer-main-container{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    background-color: #ffffff;
+}
+.inner-main-container{
+    max-width: 1240px;
+    margin-top: 20px;
+    margin-bottom: auto;
+    padding-left: 10px ;
+    padding-right: 10px ;
+    overflow-x: hidden;
+    
+}
+
+.main{
+    height: 1075px;
+    max-width: 1240px;
+    margin: auto;
+}

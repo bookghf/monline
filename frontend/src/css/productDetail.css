@@ -26,8 +26,27 @@
     justify-content: left;
     align-items: center;
 }
+.pagination-container{
+    display: flex;
+    width: 100%;
+    height: 45px;
+    justify-content: center;
+}
+.pagination {
+    display: inline-block;
+}
 
+.pagination div{
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
 
+.pagination div:hover {
+    cursor: pointer;
+    background-color: #ddd;
+}
 
 .detail-content{
     max-height: max-content;

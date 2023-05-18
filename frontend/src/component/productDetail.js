@@ -1,8 +1,8 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom';
-import '../css/product_detail.css'
+import '../css/productDetail.css'
 
-const Product_detail = () => {
+const ProductDetail = () => {
     let { state } = useLocation();
     let detail = state.item.member;
 
@@ -136,4 +136,4 @@ const Product_detail = () => {
     )
 }
 
-export default Product_detail
+export default ProductDetail

@@ -1,11 +1,15 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { useLocation } from 'react-router-dom';
 import '../css/productDetail.css'
 
 const ProductDetail = () => {
+    const [photo,setPhoto] = useState(1)
     let { state } = useLocation();
     let detail = state.item.member;
 
+    const handleSetPhoto = (e) => {
+        setPhoto(e);
+    }
     return (
         <div className='product-details-container'>
             <div className='product-details'>
@@ -32,16 +36,22 @@ const ProductDetail = () => {
                     <div className='product-show-detail'>
                         <div className='photo-show'>
                             <div className='photo-main'>
-                                <img src={detail.image.url} alt='' />
+                                <img src={(photo === 1)?(detail.image.url):(detail.second_image.url)} alt='' />
+                                    {(detail.price_range.minimum_price.discount.amount_off === 0)?(null):(
+                                        <div className='save-tag'>
+                                            <p>Saved</p>
+                                            <p>{100*detail.price_range.minimum_price.discount.amount_off/detail.price_range.minimum_price.regular_price.value}%</p>
+                                        </div>
+                                    )}                                
                             </div>
                             <div className='photo-small-container'>
                                 <div className='photo-wrap'>
-                                    <img src={detail.image.url} alt=''></img>
+                                    <img src={detail.image.url} onClick={()=> {handleSetPhoto(1)}} alt=''></img>
                                 </div>
                                 {( detail.second_image.url === "" ) ? 
                                 (null) : (
                                     <div className='photo-wrap'>
-                                        <img src={detail.second_image.url} alt='' />
+                                        <img src={detail.second_image.url} onClick={()=> {handleSetPhoto(2)}} alt='' />
                                     </div>
                                 )}
                             </div>
@@ -54,14 +64,18 @@ const ProductDetail = () => {
                                 <p>{detail.name}</p>
                             </div>
                             <div className='product-detail-price-container'>
-                                <div className='card-detail-price-container'>
+                                <div className='card-detail-price-container'>  
                                     <div className='card-detail-price'>
                                         <div className='card-discount-price'>
                                             <p>฿{detail.price_range.minimum_price.final_price.value}</p>
-                                            <p>฿{detail.price_range.minimum_price.regular_price.value}</p>
+                                            {(detail.price_range.minimum_price.discount.amount_off === 0)?(null):(
+                                                <p>฿{detail.price_range.minimum_price.regular_price.value}</p>
+                                            )}   
                                         </div>
                                         <div className='card-save-price'>
-                                            <p>SAVE ฿{detail.price_range.minimum_price.discount.amount_off}</p>
+                                            {(detail.price_range.minimum_price.discount.amount_off === 0)?(null):(
+                                                <p>SAVE ฿{detail.price_range.minimum_price.discount.amount_off}</p>
+                                            )}  
                                         </div>
                                     </div>
                                 </div>

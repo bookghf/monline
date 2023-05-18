@@ -96,7 +96,7 @@
     font-size: 16px;
     margin-top: 10px;
 }
-.card-discount-price p:last-child{
+.card-discount-price p:nth-child(2){
     margin-left: 10px;
     font-size: 18px;
     text-decoration: line-through;

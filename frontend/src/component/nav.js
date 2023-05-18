@@ -5,11 +5,11 @@ const Nav = () => {
   return (
       <div className='nav-container'>
         <div className='nav'>
-
           <div className='left-nav-container'>
-            <div className='logo-container'><img src='https://media-kiwis.monline.com/media/logo/stores/1/MOL_RGB_ON-WHITE.jpeg' alt='menu' /></div>
+            <div className='logo-container'>
+              <a href='/'><img src='https://media-kiwis.monline.com/media/logo/stores/1/MOL_RGB_ON-WHITE.jpeg' alt='menu' /></a>
+            </div>
           </div>
-
           <div className='right-nav-container'>
             <div className='right-top-nav-container'/>
             <div className='right-bottom-nav-container'>

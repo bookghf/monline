@@ -84,7 +84,33 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
+.save-tag{
+    position: absolute;
+    top: 0;
+    right: 80px;
+    width: 70px;
+    height: 70px;
+    background-color: #ff0000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+}
+.save-tag p{
+    color: #ffffff;
+    margin:0 ;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+.save-tag p:last-child{
+    font-size: 24px;
+    font-weight: 700;
+}
+
 .photo-main img{
     width: 400px ;
     height: 500px ;
@@ -96,6 +122,10 @@
 .photo-small-container{
     display: flex;
     flex-flow: row wrap;
+}
+
+.photo-small-container img:hover{
+    cursor: pointer;
 }
 .photo-wrap{
     height: 150px;

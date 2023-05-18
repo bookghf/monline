@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import Card from '../component/card';
+import { Link } from 'react-router-dom';
 import '../css/main.css'
 
 const Main = () => {
@@ -20,12 +21,27 @@ const Main = () => {
         <div className='outer-main-container'>
             <div className='inner-main-container'>
                 <div className='main'>
-                    <div className='breadcrumb'></div>
-                    <div className='Type_Quantity'>
-                    {/* <Pagination count={10} />
-                    <Pagination count={10} color="primary" />
-                    <Pagination count={10} color="secondary" />
-                    <Pagination count={10} disabled /> */}
+                    <div className='breadcrumb-container'>
+                        <div className='breadcrumb'>
+                            <li>
+                                <p>Home</p>
+                                <p>&gt;</p>
+                            </li>
+                            <li>
+                                <p>Women</p>
+                                <p>&gt;</p>
+                            </li>
+                            <li>
+                                <p>Cosmetics</p>
+                            </li>
+                            
+                        </div>
+                    </div>
+                    <div className='type-quantity-container'>
+                        <div className='type-quantity'>
+                            <h1>Cosmetics</h1>
+                            <p>&#40;{products.length} items&#41;</p>
+                        </div>
                     </div>
                     <div className='content'>
                         <div className='product-card-container'>
@@ -33,7 +49,7 @@ const Main = () => {
                         (<p> Loading...</p>) :
                         (products.map((member, i) => (
                             <div className='product-card' key={i}>
-                                <Card products={member}/>
+                                <Link to={`/product/${member.url_key}`} style={{ textDecoration: 'none' }} state={{item: {member}}}><Card products={member}/></Link>
                             </div>
                             )))}
                         </div>

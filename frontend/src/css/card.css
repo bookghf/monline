@@ -79,8 +79,8 @@
 
 
 .card-detail-price-container {
-    font-size: 14px;
-    display: block;
+    font-size: 20px;
+    font-weight: 700;
 }
 .card-detail-price {
     color: #ff0000;
@@ -89,9 +89,16 @@
 .card-discount-price{
     display: flex;
 }
-
+.card-discount-price p{
+    margin-bottom: 0;
+}
+.card-save-price p{
+    font-size: 16px;
+    margin-top: 10px;
+}
 .card-discount-price p:last-child{
-    margin-left: 5px;
+    margin-left: 10px;
+    font-size: 18px;
     text-decoration: line-through;
     color: #a9a9a9;
 }

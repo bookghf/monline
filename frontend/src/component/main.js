@@ -59,12 +59,12 @@ const Main = () => {
                     </div>
                     <div className='pagination-container'>
                         <div class="pagination">
-                            <div onClick={()=>handleBNPage(-1)}>&laquo;</div>
-                            <div onClick={()=>handleSetPage(1)}>1</div>
-                            <div onClick={()=>handleSetPage(2)}>2</div>
-                            <div onClick={()=>handleSetPage(3)}>3</div>
-                            <div onClick={()=>handleSetPage(4)}>4</div>
-                            <div onClick={()=>handleBNPage(1)}>&raquo;</div>
+                            <div className="none" onClick={()=>handleBNPage(-1)}>&laquo;</div>
+                            <div className={(page === 1)?("stay"):("none")} page={1} onClick={()=>handleSetPage(1)}>1</div>
+                            <div className={(page === 2)?("stay"):("none")} page={2} onClick={()=>handleSetPage(2)}>2</div>
+                            <div className={(page === 3)?("stay"):("none")} page={3} onClick={()=>handleSetPage(3)}>3</div>
+                            <div className={(page === 4)?("stay"):("none")} page={4} onClick={()=>handleSetPage(4)}>4</div>
+                            <div className="none" onClick={()=>handleBNPage(1)}>&raquo;</div>
                         </div>
                     </div>
                     <div className='content'>

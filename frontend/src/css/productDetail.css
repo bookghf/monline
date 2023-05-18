@@ -26,28 +26,6 @@
     justify-content: left;
     align-items: center;
 }
-.pagination-container{
-    display: flex;
-    width: 100%;
-    height: 45px;
-    justify-content: center;
-}
-.pagination {
-    display: inline-block;
-}
-
-.pagination div{
-    color: black;
-    float: left;
-    padding: 8px 16px;
-    text-decoration: none;
-}
-
-.pagination div:hover {
-    cursor: pointer;
-    background-color: #ddd;
-}
-
 .detail-content{
     max-height: max-content;
     width: 1240px;
@@ -121,7 +99,7 @@
 
 .photo-small-container{
     display: flex;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
 }
 
 .photo-small-container img:hover{
@@ -131,7 +109,8 @@
     height: 150px;
     width: 140px;
     border: 1px solid #000000;
-    margin-right: 20px;
+    margin-top: 2px;
+    margin-right: 1px;
 }
 .photo-wrap img{
     height: 100%;

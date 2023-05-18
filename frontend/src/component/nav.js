@@ -18,6 +18,14 @@ const Nav = () => {
                   <div className='search-logo-container'>
                     <img src='https://monline.com/static/images/svgs/search-icon.svg' alt=''/>
                   </div>
+                  <div class="wrapping">
+                    <div class="searching">
+                        <input type="text" class="searchTerm" placeholder="Search for product and Brands"/>
+                        <button type="submit" class="searchButton">
+                          <img src='https://monline.com/static/images/svgs/search-icon.svg' alt=''/>
+                      </button>
+                    </div>
+                  </div>
                 </div>
                 <div className='profile-link-container'>
                   <div className='sign-container'>
